@@ -1,0 +1,74 @@
+
+@mixin mobile {
+  @media screen and (max-width: 1260px) {
+    @content
+  }
+}
+
+
+body{
+  background-color: #1f1f1f;
+
+}
+.wrapper{
+  position: relative;
+  width: 1260px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  @include mobile{
+    width: 100vw;
+  }
+}
+.carousel-wrapper{
+  width: 1200px;
+  margin-top: 50px;
+  overflow: hidden;
+  @include mobile{
+    width: 95vw;
+  }
+}
+.carousel{
+  display: flex;
+  width: 100%;
+  height: 600px;
+ cursor: pointer;
+  @include mobile{
+  height: 40vh;
+  }
+
+}
+img {
+  display: flex;
+  flex-shrink: 0;
+  width: 1200px;
+  height: 600px;
+  @include mobile{
+    width: 95vw;
+    height: 40vh;
+  }
+}
+i{
+  position: absolute;
+  top: 50%;
+  font-size: 3em;
+  color: white;
+  cursor: pointer;
+  background-color: rgba($color: #000000, $alpha: 0.3);
+  border-radius: 50%;
+  padding: 0.6rem;
+  opacity: 0.8;
+  color: white;
+  @include mobile{
+    font-size: 2em;
+  }
+ 
+}
+.fa-arrow-left{
+  left: 0%;
+}
+
+.fa-arrow-right{
+  right: 0%;
+}
