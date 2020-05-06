@@ -9,8 +9,8 @@ export const carousel = document.querySelector('.carousel');
 const leftBtn = document.querySelector('.fa-arrow-left');
 const rightBtn = document.querySelector('.fa-arrow-right');
 
-let index = 1;
-let size = carousel.clientWidth;
+export let index = 1;
+export let size = carousel.clientWidth;
 carousel.style.transform = `translatex(${index * size * -1}px)`;
 
 
@@ -38,7 +38,7 @@ carousel.addEventListener('transitionend', function () {
 })
 
 
-function leftSlide() {
+export function leftSlide() {
   if (index <= 0) {
     return;
   }
@@ -47,7 +47,7 @@ function leftSlide() {
   carousel.style.transition = 'transform 0.4s ease';
 }
 
-function rightSlide() {
+export function rightSlide() {
   if (index >= totalImgAmount - 1) {
     return;
   }

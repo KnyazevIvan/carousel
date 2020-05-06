@@ -1,4 +1,4 @@
-import { carousel } from "./main";
+import { carousel,size,index, rightSlide, leftSlide } from "./main";
 
 var clientX, shift;
 
@@ -21,6 +21,7 @@ export function dragAction(e) {
 
 
 export function dragStart(e){
+  console.log('hi')
   e = e || window.event;
   e.preventDefault();
   
