@@ -3,7 +3,7 @@ import {dragAction} from './touch'
 import {dragEnd} from './touch'
 import {totalImgAmount } from "./setimg";
 import { fetch } from './fetch';
-
+import './style/style.css'
 
 export const carousel = document.querySelector('.carousel');
 const leftBtn = document.querySelector('.fa-arrow-left');
